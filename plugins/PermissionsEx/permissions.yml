@@ -8,30 +8,28 @@ groups:
     options:
       rank: '700'
     permissions:
-    - worldguard.build.block.place.*
-    - worldguard.build.block.remove.*
-    - worldguard.build.block.interact.chest
-    - worldguard.build.block.interact.trapped_chest
-    - worldguard.build.block.interact.wooden_door
-    - worldguard.build.block.interact.spruce_door
-    - worldguard.build.block.interact.birch_door
-    - worldguard.build.entity.interact.minecart
+    - worldguard.build.*
+    - worldguard.blacklist.tools.wood
   adult:
     options:
       rank: '500'
     permissions:
     - worldguard.build.*
+    - worldguard.blacklist.tools.*
   elder:
     options:
       rank: '300'
     permissions:
     - worldguard.build.*
+    - worldguard.blacklist.tools.wood
+    - worldguard.blacklist.tools.stone
+    - worldguard.blacklist.tools.iron
   superadmin:
     permissions:
-    - minecraft.command.*
-    - worldedit.*
-    - permissions.*
     - bukkit.command.*
+    - minecraft.command.*
+    - permissions.*
+    - worldedit.*
     - worldguard.*
     options:
       prefix: '&0(&4SA&0)&7 '
@@ -40,7 +38,7 @@ schema-version: 1
 users:
   83596937-455e-47e8-9b33-c8ce84a8b1ea:
     group:
-    - adult
+    - child
     permissions: []
     options:
       name: AgentSnazz

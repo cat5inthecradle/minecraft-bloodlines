@@ -63,3 +63,67 @@
 #[wood:0;>=2]
 #ignore-groups=admins,mods
 #on-break=notify,deny,log
+
+###############################################################################
+# Tools - worldguard.blacklist.tools.<type>
+###############################################################################
+
+# Diamond Tools Blacklist
+[DIAMOND_AXE,DIAMOND_HOE,DIAMOND_SWORD,DIAMOND_SPADE,DIAMOND_PICKAXE]
+ignore-perms=worldguard.blacklist.tools.diamond
+on-use=deny,tell
+message=You lack the ability to use diamond tools.
+
+# Gold Tools blacklist
+[GOLD_AXE,GOLD_HOE,GOLD_SWORD,GOLD_SPADE,GOLD_PICKAXE]
+ignore-perms=worldguard.blacklist.tools.gold
+on-use=deny,tell
+message=You lack the ability to use gold tools.
+
+# Iron Tools blacklist
+[IRON_AXE,IRON_HOE,IRON_SWORD,IRON_SPADE,IRON_PICKAXE]
+ignore-perms=worldguard.blacklist.tools.iron
+on-use=deny,tell
+message=You lack the ability to use iron tools.
+
+# Stone Tools blacklist
+[STONE_AXE,STONE_HOE,STONE_SWORD,STONE_SPADE,STONE_PICKAXE]
+ignore-perms=worldguard.blacklist.tools.stone
+on-use=deny,tell
+message=You lack the ability to use stone tools.
+
+# Wood Tools blacklist
+[WOOD_AXE,WOOD_HOE,WOOD_SWORD,WOOD_SPADE,WOOD_PICKAXE]
+ignore-perms=worldguard.blacklist.tools.wood
+on-use=deny,tell
+message=You lack the ability to use wood tools.
+
+###############################################################################
+# Armor - worldguard.blacklist.armor.<type>
+###############################################################################
+
+# Don't know how to do this yet
+
+###############################################################################
+# Entities - worldguard.blacklist.interact.<entity>
+###############################################################################
+
+[enchantment_table]
+on-interact=deny,tell
+message=You lack the experience to practice enchanting.
+
+[brewing_stand]
+on-interact=deny,tell
+message=You lack the experience to practice brewing.
+
+[crafting_table]
+on-interact=deny,tell
+message=You lack the skill to use crafting tables.
+
+[furnace,lit_furnace]
+on-interact=deny,tell
+message=You lack the skill to use furnaces.
+
+[anvil]
+on-interact=deny,tell
+message=You lack the skill to practice smithing.
