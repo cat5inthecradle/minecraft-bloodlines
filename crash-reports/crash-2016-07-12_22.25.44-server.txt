@@ -1,0 +1,59 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  SpongeCoremod (spongeforge-1.10.2-2011-5.0.0-BETA-1560.jar)
+Contact their authors BEFORE contacting forge
+
+// Sorry :(
+
+Time: 7/12/16 10:25 PM
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: Java heap space
+	at net.minecraft.world.chunk.NibbleArray.<init>(SourceFile:9)
+	at net.minecraft.world.chunk.storage.ExtendedBlockStorage.<init>(ExtendedBlockStorage.java:26)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.func_75823_a(AnvilChunkLoader.java:438)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.checkedReadChunkFromNBT__Async(AnvilChunkLoader.java:131)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.loadChunk__Async(AnvilChunkLoader.java:104)
+	at net.minecraftforge.common.chunkio.ChunkIOProvider.run(ChunkIOProvider.java:68)
+	at net.minecraftforge.common.chunkio.ChunkIOExecutor.syncChunkLoad(ChunkIOExecutor.java:92)
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:123)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186028_c(ChunkProviderServer.java:86)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186025_d(ChunkProviderServer.java:135)
+	at net.minecraft.server.MinecraftServer.prepareSpawnArea(MinecraftServer.java:376)
+	at net.minecraft.server.MinecraftServer.func_71222_d(MinecraftServer.java:340)
+	at net.minecraft.server.MinecraftServer.func_71247_a(MinecraftServer.java:328)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:266)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:431)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (x86) version 10.0
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode, sharing), Oracle Corporation
+	Memory: 248 bytes (0 MB) / 259522560 bytes (247 MB) up to 259522560 bytes (247 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP 9.32 Powered by Forge 12.18.1.2011 8 mods loaded, 8 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAA	FML{8.0.99.99} [Forge Mod Loader] (forge-1.10.2-12.18.1.2011-universal.jar) 
+	UCHIJAA	Forge{12.18.1.2011} [Minecraft Forge] (forge-1.10.2-12.18.1.2011-universal.jar) 
+	UCHIJAA	sponge{1.10.2-2011-5.0.0-BETA-1560} [SpongeForge] (spongeforge-1.10.2-2011-5.0.0-BETA-1560.jar) 
+	UCHIJAA	griefprevention{1.0} [GriefPrevention] (griefprevention-1.8.9-1.0-28.jar) 
+	UCHIJAA	nucleus{0.5.0} [Nucleus] (Nucleus-0.5.0-plugin.jar) 
+	UCHIJAA	ninja.leaping.permissionsex{2.0-SNAPSHOT} [PermissionsEx] (PermissionsEx-Sponge.jar) 
+	UCHIJAA	prism{3.0.0} [Prism] (Prism-3.0.0-beta2-6-g84d50b4.jar) 
+	Loaded coremods (and transformers): 
+SpongeCoremod (spongeforge-1.10.2-2011-5.0.0-BETA-1560.jar)
+  org.spongepowered.common.launch.transformer.SpongeSuperclassTransformer
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 20; []
+	Is Modded: Definitely; Server brand changed to 'fml,forge,sponge'
+	Type: Dedicated Server (map_server.txt)
